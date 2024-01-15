@@ -1,0 +1,31 @@
+GET http://localhost:3000/movies
+###
+GET http://localhost:3000/movies/9ea83914-85e8-43ef-abdf-aaf5e4a5093a
+###
+GET http://localhost:3000/movies?genre=action
+
+### POST
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+    "title": "The Matrix",
+    "year": 1999,
+    "director": "Lana Wachowski",
+    "duration": 136,
+    "poster": "https://i.ebayimg.com/images/g/QFQAAOSwAQpfjaA6/s-l1200.jpg",
+    "genre": [
+      "Action",
+      "Sci-Fi"
+    ],
+    "rate": 8.7
+  }
+
+### Patch
+PATCH http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+  "year": 1994
+}
